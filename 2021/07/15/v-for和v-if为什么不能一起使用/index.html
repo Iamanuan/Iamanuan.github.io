@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      178 字
+      179 字
     </span>
   
 
@@ -240,14 +240,17 @@
             <h1 style="display: none">v-for和v-if为什么不能一起使用？</h1>
             
             <div class="markdown-body">
-              <h1 id="vue-v-for和v-if-为什么不能一起使用？"><a href="#vue-v-for和v-if-为什么不能一起使用？" class="headerlink" title="vue- v-for和v-if 为什么不能一起使用？"></a>vue- v-for和v-if 为什么不能一起使用？</h1><p><strong>v-for和v-if最好不要在一个元素上使用</strong></p>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="xml">例子：</span><br><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span></span><br><span class="xml">      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in 100&quot;</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;item &gt; 5&quot;</span>&gt;</span></span><br><span class="xml">        </span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">item</span>&#125;&#125;</span><span class="xml"></span><br><span class="xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><br><span class="xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+              <h1 id="vue-v-for和v-if-为什么不能一起使用？"><a href="#vue-v-for和v-if-为什么不能一起使用？" class="headerlink" title="vue- v-for和v-if 为什么不能一起使用？"></a>vue- v-for和v-if 为什么不能一起使用？</h1><p><strong>v-for 和v-if 最好不要在一个元素上使用</strong></p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;div id=&quot;app&quot;&gt;<br>    &lt;ul&gt;<br>      &lt;li v-for=&quot;item in 100&quot; v-if=&quot;item &gt; 5&quot;&gt;<br>        &#123;&#123;item&#125;&#125;<br>      &lt;/li&gt;<br>    &lt;/ul&gt;<br>  &lt;/div&gt;<br></code></pre></td></tr></table></figure>
 
 
 
+<blockquote>
 <p>因为，v-for的优先级比v-if的高，会导致每判断一次都要循环遍历一次，哪怕只是渲染很小的一部分</p>
-<p>解决方案：将其更换为计算属性</p>
-<p>好处：在渲染时只遍历活跃用户，解耦渲染层的逻辑，可维护性更强</p>
+</blockquote>
+<p><strong>解决方案：</strong>将其更换为计算属性</p>
+<p><strong>好处</strong>：在渲染时只遍历活跃用户，解耦渲染层的逻辑，可维护性更强</p>
 <hr>
 <p><em>参考文献：</em></p>
 <ol>
@@ -280,9 +283,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/15/%E6%9C%AA%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6/">
+                      <a href="/2021/07/16/npm%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">未整理文件</span>
+                        <span class="hidden-mobile">npm安装报错</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -290,7 +293,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/15/vue-delete%E5%92%8Cvue.delete%20%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                      <a href="/2021/07/15/delete%E5%92%8Cvue.delete%20%E7%9A%84%E5%8C%BA%E5%88%AB/">
                         <span class="hidden-mobile">vue- delete和vue.delete 的区别</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>

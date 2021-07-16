@@ -14,13 +14,29 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="rgba(25,63,139,1)">
-  <meta name="description" content="">
+  <meta name="description" content="记录一些函数方法">
   <meta name="author" content="阿暖">
   <meta name="keywords" content="">
   
-  <title>标签 - javascript - 路依依的博客</title>
+  <title>javascript一些方法 - 路依依的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -154,22 +170,55 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/Dongsen.jpg') no-repeat center center;
+         style="background: url('/img/sea.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签 - javascript">
+            <span class="h2" id="subtitle" title="javascript一些方法">
               
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-16 10:52" pubdate>
+        2021年7月16日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      186 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -178,46 +227,100 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">javascript一些方法</h1>
+            
+            <div class="markdown-body">
+              <h1 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// splice（要删除第一项的位置，要删除的项数）</span><br><span class="hljs-comment">// splice（起始位置第一个插入数的下标位置，要删除的项数，要插入的项）</span><br><span class="hljs-comment">// ruturn 一个数组，包含从原始数组中删除的项（）如果没有删除任何项，则返回一个空数组</span><br><br><span class="hljs-keyword">var</span> colors = [<span class="hljs-string">&quot;red&quot;</span>,<span class="hljs-string">&quot;green&quot;</span>,<span class="hljs-string">&quot;blue&quot;</span>]<br><span class="hljs-keyword">var</span> removed = colors.splice(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br><span class="hljs-built_in">console</span>.log(colors)<br>removed = colors.splice(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&quot;yellow&quot;</span>,<span class="hljs-string">&quot;orange&quot;</span>) <span class="hljs-comment">//在下标为1的地方开始插入</span><br><span class="hljs-built_in">console</span>.log(colors)<br></code></pre></td></tr></table></figure>
+
+<h1 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h1> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> person = &#123;<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;Nicholas&#x27;</span>&#125;<br><br><span class="hljs-keyword">var</span> people = [&#123;<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;Nicholas&#x27;</span>&#125;] <span class="hljs-comment">//指向一个匿名对象的引用</span><br><span class="hljs-keyword">var</span> morePeople = [person] <span class="hljs-comment">//指向person对象的引用</span><br><br><span class="hljs-built_in">console</span>.log(people.indexOf(person)) <span class="hljs-comment">//-1 people内找不到person对象</span><br><span class="hljs-built_in">console</span>.log(morePeople.indexOf(person)) <span class="hljs-comment">//0 能找到person对象</span><br></code></pre></td></tr></table></figure>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/javascript/">javascript</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/07/16/%E8%A7%A3%E5%86%B3GitHub%E8%AE%BF%E9%97%AE%E8%BF%87%E6%85%A2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解决GitHub访问过慢</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/07/16/IE%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98/">
+                        <span class="hidden-mobile">IE线性渐变</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
                 
 
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-  
-    
-      
-      <p class="h5">2021</p>
-    
-    <a href="/2021/07/16/javascript%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">javascript一些方法</span>
-      <time style="float: right;">07-16</time>
-    </a>
-  
-    
-    <a href="/2021/07/13/%E8%AF%AD%E6%B3%95%E7%B3%96%EF%BC%9F/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">语法糖？</span>
-      <time style="float: right;">07-13</time>
-    </a>
-  
-</div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -316,6 +419,8 @@
 
   
     
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
@@ -324,9 +429,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 
